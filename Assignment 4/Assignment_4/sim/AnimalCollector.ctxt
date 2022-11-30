@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=AnimalCollector
+comment0.text=\r\n\ A\ class\ to\ de-couple\ animal\ types\ from\ the\ Simulator.\r\n\r\n\ @author\ E\ Brown\r\n\ @version\ Nov\ 2022\r\n
+comment1.params=field
+comment1.target=Animal\ randAnimal(Field)
+numComments=2

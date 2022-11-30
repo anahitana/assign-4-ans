@@ -1,0 +1,10 @@
+/**
+ * This submission is for COMP 2001 F2022 Assignment 4
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ * @attribution (replace this line with explanation of coding help you received and identify the source of the help)
+ * @attribution (add more attribution lines, one for each source)
+ *
+ */
+package sim;

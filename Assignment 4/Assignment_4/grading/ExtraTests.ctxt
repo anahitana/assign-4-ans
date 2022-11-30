@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ExtraTests
+comment1.params=
+comment1.target=void\ pause()
+comment2.params=ms
+comment2.target=void\ sleep(int)
+comment3.params=
+comment3.target=void\ setup()
+comment4.params=
+comment4.target=void\ teardown()
+comment5.params=lower\ upper
+comment5.target=javax.swing.JTextField\ findFieldWithVal(int,\ int)
+comment6.params=
+comment6.target=void\ fasterFieldButton()
+comment7.params=
+comment7.target=void\ slowerFieldButton()
+numComments=8

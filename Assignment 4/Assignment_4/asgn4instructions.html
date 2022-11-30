@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>asgn4instructions</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="comp2001-f2022-assignment-4-instructions">COMP2001 F2022 Assignment 4 Instructions</h1>
+<h2 id="objectives">Objectives</h2>
+<p>Swing programming.</p>
+<p>The problem concerns creating a control panel for a rudimentary simulation.</p>
+<h2 id="background">Background</h2>
+<ul>
+<li>Videos of the relevant lecture material and demo of the completed assignment will be posted.</li>
+<li>You will need to use <strong>JButtons</strong>, <strong>javax.swing.Timer</strong> and <strong>JTextField</strong> objects which were not specifically covered in lecture, but they use action performed events and <strong>addActionListener()</strong> in the same manner as the swing Components covered in lecture.</li>
+<li>There are code examples from the book that might help
+<ul>
+<li>There are <strong>JButtons</strong> and <strong>JTextFields</strong> in the AddressBook GUI interface from Chapter 14, and also included in Lab 8. It also has panels, panes, and layout elements that you don’t need for this assignment, so skip it if it just confuses you.</li>
+<li>The MusicPlayer project from chapter 13 has a lot of components you don’t need, but it has a few <strong>JButtons</strong> with actionListeners attached that might help you with syntax.</li>
+</ul></li>
+<li>You will need some more information on the <strong>Timer</strong> object:
+<ul>
+<li><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/Timer.html">The Timer API</a> is the only one you need to research additional methods (stop, start, restart, change the delay) for this assignment.</li>
+</ul></li>
+<li>But here are some (unnecessary) links for the other components if you want to explore further:
+<ul>
+<li>JTextField abstract class javadoc shows it uses <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/text/JTextComponent.html#setText(java.lang.String)">set/getText</a> the same way a JLabel does. If you really need more methods, you can also look in the <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/JTextField.html">concrete class javadoc</a> if you want more information.</li>
+<li>many JButton methods are in the <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/swing/AbstractButton.html">AbstractButton class</a></li>
+</ul></li>
+</ul>
+<h2 id="activity">Activity</h2>
+<ul>
+<li><p>Checkout comp2001-assign4 repository from github classroom for the following credit work</p></li>
+<li><p>Most of the JUNIT tests are provided, but some are held back, including tests of the file picker, the menu items, and the speed/interval number label.</p>
+<ul>
+<li>Some JUNIT tests for the <strong>JTextField</strong> contents and Menu Items are withheld from distribution, but will be used in evaluation.</li>
+</ul></li>
+<li><p>Create a control panel <strong>JFrame</strong> window with the title “Sim Control” for the operation of the simulator which will pass the unit tests. The required functionality and controls are demonstrated on an accompanying demonstration video and listed here:</p>
+<ul>
+<li>A <em>File</em> menu
+<ul>
+<li>A <em>Load Settings</em> menu item which opens a file picker. Picking a file causes a JOptionPane to open displaying a not implemented message.</li>
+<li>A <em>Save Settings</em> menu item which opens a file picker. Picking a file causes a JOptionPane to open displaying a not implemented message.</li>
+<li>A <em>Quit</em> menu item that shuts down the simulation and the control panel.</li>
+</ul></li>
+<li>A <strong>JLabel</strong> message bar with the words “Sim Running/Not Running” as appropriate.</li>
+<li>A <em>Run</em> JButton that starts a javax.swing.Timer object causing the simulator to run using ongoing action events.</li>
+<li>A <em>Stop</em> JButton that stops the Timer</li>
+<li>A <em>Step</em> JButton that move the simulation forward one step.</li>
+<li>A <em>Slower</em> JButton that increases the delay between timer events 2x</li>
+<li>A JTextField that displays the <strong>Timer</strong> delay in millisecs</li>
+<li>A <em>Faster</em> JButton that reduces the <strong>Timer</strong> delay 0.5x</li>
+<li>A <em>Run To:</em> JButton that advances the simulation to a specific step.</li>
+<li>A <strong>JTextField</strong> that displays the run to step number</li>
+<li>A <em>Reset</em> JButton that resets the simulation</li>
+<li>A <strong>JLabel</strong> status bar that shows the step number and Fox/Rabbit population. It may show the words “Status Bar” before the simulation is initialized.</li>
+</ul></li>
+<li><p>The layout of the control panel components is not important in the assignment evaluation. Do not worry about duplicating the layout in the demo video.</p></li>
+<li><p>To get the unit tests to work:</p>
+<ul>
+<li>The buttons, menus and menu items must have the same names as listed here and on the demo video in order for the unit tests to locate those swing components. The control panel frame must have the title “Sim Control” in order for the junits to locate it.</li>
+<li>Your control panel object Class must be called <strong>SimController</strong> in order for the junit tests to construct an instance of it.
+<ul>
+<li>Creating an instance of SimController should create the control panel object and the simulator object in a state ready for use using the buttons on the control panel.</li>
+<li>The junit tests expect to call a <code>SimController.quit()</code> method to shut down the swing components and the simulation. The quit method should:
+<ul>
+<li>turn off the <strong>Timer</strong> object</li>
+<li>shut down the simulation</li>
+<li>set any control panel <code>JFrame.visibility()</code> to false and then call the frame’s <code>dispose()</code> method</li>
+</ul></li>
+<li>When the simulation is shut down, it should also set any <strong>JFrame</strong>(s) it is using to <code>visibility(false)</code> and then <code>dispose()</code> the <strong>JFrames</strong>.</li>
+<li>If you leave simulations, control panels or <strong>JFrames</strong> active after quit(), then the junits will not terminate correctly.</li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=GradingTestWatcher
+comment0.text=\r\n\ A\ test\ watcher\ to\ report\ the\ evaluation\ of\ junit\ tests\ according\ to\ @GradeValue\ method\ annotations.\r\n\r\n\ For\ COMP2001\ classes\r\n\r\n\ @author\ E\ Brown\r\n\ @version\ 2022.08.17\r\n
+comment1.params=extensionContext\ throwable
+comment1.target=void\ testAborted(org.junit.jupiter.api.extension.ExtensionContext,\ java.lang.Throwable)
+comment2.params=extensionContext\ optional
+comment2.target=void\ testDisabled(org.junit.jupiter.api.extension.ExtensionContext,\ java.util.Optional)
+comment3.params=extensionContext\ throwable
+comment3.target=void\ testFailed(org.junit.jupiter.api.extension.ExtensionContext,\ java.lang.Throwable)
+comment4.params=extensionContext
+comment4.target=void\ testSuccessful(org.junit.jupiter.api.extension.ExtensionContext)
+comment5.params=context
+comment5.target=void\ afterAll(org.junit.jupiter.api.extension.ExtensionContext)
+comment6.params=status\ extensionContext\ moreInfo
+comment6.target=void\ reportTest(java.lang.String,\ org.junit.jupiter.api.extension.ExtensionContext,\ java.lang.String)
+comment7.params=
+comment7.target=java.util.List\ getReportData()
+comment8.params=p
+comment8.target=void\ printReportData(java.io.PrintWriter)
+numComments=9

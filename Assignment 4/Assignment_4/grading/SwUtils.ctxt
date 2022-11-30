@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=SwUtils
+comment0.text=\r\n\ Taken\ from\ http\://www.java2s.com/Code/Java/Swing-JFC/GetAllComponentsinacontainer.htm\r\n\r\n\ Encapsulates\ various\ utilities\ for\ windows\ (ie\:\ <code>Frame</code>\ and\r\n\ <code>Dialog</code>\ objects\ and\ descendants,\ in\ particular).\r\n\r\n\ @author\ Richard\ Bair\r\n\ @author\ modified\ E\ Brown\ Nov\ 2022\r\n
+comment1.params=c
+comment1.target=java.util.List\ getAllComponents(java.awt.Container)
+comment2.params=c
+comment2.target=java.lang.String\ cIdent(java.awt.Component)
+comment2.text=string\ for\ identing\ component\ in\ tests
+numComments=3

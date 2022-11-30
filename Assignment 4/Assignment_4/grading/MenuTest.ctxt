@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=MenuTest
+comment1.params=
+comment1.target=void\ pause()
+comment2.params=ms
+comment2.target=void\ sleep(int)
+comment3.params=
+comment3.target=void\ setup()
+comment4.params=
+comment4.target=void\ teardown()
+comment5.params=
+comment5.target=void\ loadCancel()
+comment6.params=
+comment6.target=void\ saveOpen()
+comment7.params=
+comment7.target=void\ openWithDialog()
+comment8.params=
+comment8.target=void\ clearDialog()
+numComments=9
